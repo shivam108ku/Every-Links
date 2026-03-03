@@ -10,7 +10,7 @@ datasource db {
 
 model User {
   id String @id @default(cuid())
-  clerk String @unique
+  clerkId String @unique @map("clerk")
   email String @unique
   username String? @unique
 
@@ -25,4 +25,3 @@ model User {
   updatedAt DateTime @updatedAt
 
 }
-
